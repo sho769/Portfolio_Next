@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import MovieCard from "../components/MovieCard";
 import "./MovieCard.css";
-import searchIcon from "../public/search.svg";
+import searchIcon from "../../../public/search.svg";
 
 // Use environment variable for API key
 const API_URL = `http://www.omdbapi.com/?apikey=${process.env.NEXT_PUBLIC_OMDB_API_KEY}`;

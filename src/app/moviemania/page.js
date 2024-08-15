@@ -7,7 +7,7 @@ import "./MovieCard.css";
 import searchIcon from "../../../public/search.svg";
 
 // Use environment variable for API key
-const API_URL = `http://www.omdbapi.com/?apikey=${process.env.NEXT_PUBLIC_OMDB_API_KEY}`;
+const API_URL = `https://www.omdbapi.com/?apikey=${process.env.NEXT_PUBLIC_OMDB_API_KEY}`;
 
 export default function Home() {
   const [movies, setMovies] = useState([]);

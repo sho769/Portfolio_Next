@@ -2,8 +2,8 @@
 "use client";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import MovieCard from "@/components/MovieCard";
-import "@/components/MovieCard.css";
+import MovieCard from "../components/MovieCard";
+import "./MovieCard.css";
 import searchIcon from "../public/search.svg";
 
 // Use environment variable for API key

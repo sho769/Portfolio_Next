@@ -1,13 +1,13 @@
 "use client";
-import Image from "next/image.js";
+import Image from "next/image";
 import { useEffect, useState } from "react";
-import MovieCard from "./MovieCard.jsx";
+import MovieCard from "../components/MovieCard.jsx";
 import "./MovieCard.css";
 import searchIcon from "../../../public/search.svg";
 
 const API_URL = "http://www.omdbapi.com/?apikey=35573564";
 
-const App = () => {
+export default function Home() {
   const [movies, setMovies] = useState([]);
   const [search, setSearch] = useState("");
 
@@ -22,22 +22,18 @@ const App = () => {
   }, []);
 
   return (
-    <div className="App">
+    <div className="app">
       <h1 className="title">Moviemania</h1>
       <div className="search">
         <input
           placeholder="Search for movies"
           value={search}
-          onChange={(e) => {
-            setSearch(e.target.value);
-          }}
+          onChange={(e) => setSearch(e.target.value)}
         />
         <Image
           src={searchIcon}
           alt="search icon"
-          onClick={() => {
-            searchMovies(search);
-          }}
+          onClick={() => searchMovies(search)}
         />
       </div>
       {movies?.length > 0 ? (
@@ -53,6 +49,4 @@ const App = () => {
       )}
     </div>
   );
-};
-
-export default App;
+}

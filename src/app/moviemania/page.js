@@ -12,9 +12,15 @@ export default function Home() {
   const [search, setSearch] = useState("");
 
   const searchMovies = async (title) => {
-    const response = await fetch(`${API_URL}&s=${title}`);
-    const data = await response.json();
-    setMovies(data.Search);
+    try {
+      const response = await fetch(`${API_URL}&s=${title}`);
+      const data = await response.json();
+      console.log(data); // Inspect the response
+      setMovies(data.Search || []); // Handle empty or missing `Search`
+    } catch (error) {
+      console.error("Error fetching movies:", error);
+      setMovies([]); // Handle fetch errors
+    }
   };
 
   useEffect(() => {
@@ -36,7 +42,7 @@ export default function Home() {
           onClick={() => searchMovies(search)}
         />
       </div>
-      {movies?.length > 0 ? (
+      {movies.length > 0 ? (
         <div className="containerr">
           {movies.map((movie, index) => (
             <MovieCard key={movie.imdbID || index} movie={movie} />

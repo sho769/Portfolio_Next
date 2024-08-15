@@ -59,25 +59,6 @@ const IpChicken = () => {
     }
   };
 
-  const fetchIPAbuse = async (ip) => {
-    try {
-      const response = await fetch(
-        `https://api.abuseipdb.com/api/v2/check?ipAddress=${ip}`,
-        {
-          method: "GET",
-          headers: {
-            Key: "4dcb18ece7add5543c4554cb55107e888eb0e422b57f270d2c64c39937ecd94ab54b1f663ad3ef7a",
-            Accept: "application/json",
-          },
-        }
-      );
-      const data = await response.json();
-      // Handle IP abuse data if needed
-    } catch (error) {
-      console.error("Error fetching IP abuse info:", error);
-    }
-  };
-
   const fetchWeather = async (ip) => {
     try {
       const response = await fetch(

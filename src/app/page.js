@@ -12,10 +12,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Your Website Title</title>
+        <title>Arsh Portfolio</title>
         <meta
           name="description"
-          content="A brief description of your website."
+          content="Welcome to the official portfolio of Arshdeep Singh, a skilled software developer specializing in Java, Springboot, Python, and mobile application development."
         />
         <meta
           name="keywords"
@@ -23,11 +23,11 @@ export default function Home() {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charSet="UTF-8" />
-        <meta name="author" content="Your Name" />
-        <meta property="og:title" content="Your Website Title" />
+        <meta name="author" content="Shourya Venkatraman" />
+        <meta property="og:title" content="Arsh Portfolio" />
         <meta
           property="og:description"
-          content="A brief description of your website."
+          content="A portfolio made by Shourya Venkatraman and Arshdeep Singh showcasing our skills in next JS."
         />
         <meta property="og:image" content="/path/to/your/image.jpg" />
         <meta property="og:url" content="https://yourwebsite.com" />

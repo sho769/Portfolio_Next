@@ -22,7 +22,7 @@ const projectsData = [
     id: 3,
     title: "IP Chicken",
     description:
-      "Displays your public IP address and fetches the secuurity list",
+      "Displays your public IP address and fetches the security list",
     image: "/images/projects/3.png",
     previewUrl: "../ipChicken",
   },
